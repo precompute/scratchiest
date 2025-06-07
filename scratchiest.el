@@ -5,8 +5,8 @@
 ;; Author: precompute <git@precompute.net>
 ;; URL: https://github.com/precompute/legit
 ;; Created: May 24, 2025
-;; Modified: May 24, 2025
-;; Version: 0.3.0
+;; Modified: June 8, 2025
+;; Version: 0.3.5
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -86,7 +86,8 @@ When new-window is set, the value of `scratchiest-always-new-window’ will be i
 
 (defun scratchiest--in-scratch? ()
   "Return t if in a *scratch* buffer."
-  (string-equal "*scratch" (substring (buffer-name) 0 8)))
+  (and (< 8 (length (buffer-name)))
+       (string-equal "*scratch" (substring (buffer-name) 0 8))))
 
 (defun scratchiest--generate-name ()
   "Generate the name for a new scratch buffer."
