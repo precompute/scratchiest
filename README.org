@@ -1,1 +1,11 @@
 #+HTML: <img src="banner.webp" align="center">
+
+
+This package helps create and manage *scratch* buffers.
+- Backup and restore *scratch* buffers
+- Create new *scratch* buffers
+- Set default mode for *scratch* buffers (can be unset with prefix arg)
+- Set custom scratch message
+- Set custom suffix for buffer-name
+
+=M-x scratchiest=

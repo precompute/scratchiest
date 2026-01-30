@@ -5,8 +5,8 @@
 ;; Author: precompute <git@precompute.net>
 ;; URL: https://github.com/precompute/legit
 ;; Created: May 24, 2025
-;; Modified: June 8, 2025
-;; Version: 0.3.5
+;; Modified: January 31, 2026
+;; Version: 0.3.6
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -110,7 +110,7 @@ When new-window is set, the value of `scratchiest-always-new-window’ will be i
                                  (substring rnd 16 18) 16))))
                       (substring rnd 18 20)
                       (substring rnd 20 32)))))
-          (unless scratchiest-suffix "")))
+          (or scratchiest-suffix "")))
 
 (defun scratchiest (arg)
   "Make and/or switch to a scratch buffer.
